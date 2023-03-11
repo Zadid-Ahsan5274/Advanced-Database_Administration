@@ -1,0 +1,5 @@
+select last_name||' is a '||job_id from employees;
+select last_name||' is a '||job_id as "Employee Details" from employees;
+Select last_name||'''s Annual Salary is '||(Salary+Salary*NVL(COMMISSION_PCT,0))*12 as "Annual Salary" from employees;
+select last_name from employees where last_name like '__o%';
+select first_name, last_name, department_id, salary from employees order by department_id, salary desc;
