@@ -17,7 +17,7 @@ select TRUNC(45.926,2), TRUNC(45.926,0), TRUNC(45.926,-1) from dual;
 select last_name, salary, MOD(salary,5000) from employees where job_id='SA_REP';
 select last_name, hire_date, job_id from employees where hire_date<'01-FEB-88';
 select sysdate from dual;
-select last_name,(SYSDATE-hire_date)/7 as "Weeks Worked",(SYSDATE-hire_date)/(7*24) as "Hours Worked" from employees where department_id=90;
+select last_name,(SYSDATE-hire_date)/7 as "Weeks Worked",(SYSDATE-hire_date)/12 as "Months Worked", (SYSDATE-hire_date)/24 as "Hours Worked" from employees where department_id=90;
 select MONTHS_BETWEEN ('01-SEP-95','11-SEP-94') from dual;
 select ADD_MONTHS('21-MAR-96',1) from dual;
 select NEXT_DAY('01-OCT-95','FRIDAY') from dual;
