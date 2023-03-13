@@ -1,0 +1,26 @@
+select LOWER('SQL COURSE') from dual;
+select UPPER('SQL COURSE') from dual;
+select INITCAP('SQL COURSE') from dual;
+select employee_id, last_name, department_id, salary, job_id from employees where LOWER(last_name)='higgins';
+select CONCAT('Hello','World') from dual;
+select substr('Hello World', 2, 5) from dual;
+select LENGTH('Hello World') from dual;
+select INSTR('Hello World','W') from dual;   -- Case sensitive
+select LPAD(salary,10,'*') from employees;
+select RPAD(salary,10,'*') from employees;
+select REPLACE('Jack and Jue','J','Bl') from dual;
+select TRIM('W' from 'Hello World') from dual;
+select employee_id, CONCAT(first_name,last_name) name, job_id, length(last_name), INSTR(last_name,'a') "Contains 'a'?" from employees where SUBSTR(job_id,4)='REP';
+select ROUND(45.926,2), TRUNC(45.926,2), MOD(1600,300) from dual;
+select ROUND(45.926,2), ROUND(45.926,0), ROUND(45.926,-1) from dual;
+select TRUNC(45.926,2), TRUNC(45.926,0), TRUNC(45.926,-1) from dual;
+select last_name, salary, MOD(salary,5000) from employees where job_id='SA_REP';
+select last_name, hire_date, job_id from employees where hire_date<'01-FEB-88';
+select sysdate from dual;
+select last_name,(SYSDATE-hire_date)/7 as "Weeks Worked",(SYSDATE-hire_date)/(7*24) as "Hours Worked" from employees where department_id=90;
+select MONTHS_BETWEEN ('01-SEP-95','11-SEP-94') from dual;
+select ADD_MONTHS('21-MAR-96',1) from dual;
+select NEXT_DAY('01-OCT-95','FRIDAY') from dual;
+select LAST_DAY('01-FEB-94') from dual;
+select ROUND(SYSDATE,'MONTH'), ROUND(SYSDATE,'YEAR') from dual;
+select TRUNC(SYSDATE,'MONTH'), TRUNC(SYSDATE,'YEAR') from dual;
