@@ -17,7 +17,7 @@ create table loan(
     branch_name   varchar2(10)  not null,
     amount int,
     primary key(loan_number),
-    --foreign key(branch_name)
+    foreign key(branch_name)
 );
 
 create table account(
@@ -25,7 +25,7 @@ create table account(
     branch_name   varchar2(10)   not null,
     balance   int,
     primary key(account_number),
-    --foreign key(branch_name)
+    foreign key(branch_name)
 );
 
 create table depositor(
@@ -41,9 +41,9 @@ create table borrower(
 );
 
 
--- drop table branch;
--- drop table customer;
--- drop table loan;
--- drop table account;
--- drop table depositor;
--- drop table borrower;
+drop table branch;
+drop table customer;
+drop table loan;
+drop table account;
+drop table depositor;
+drop table borrower;
