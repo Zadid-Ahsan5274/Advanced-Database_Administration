@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1680885746 source:f:\projects\databases\bplusdictionary\main.cpp
+	<stdio.h>
+	<conio.h>
+	<iostream>
+
+1680885944 source:f:\projects\databases\bplusdictionary\driver.cpp
+	<iostream>
+	<cstdio>
+	<vector>
+	<algorithm>
+
